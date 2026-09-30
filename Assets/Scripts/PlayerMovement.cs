@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Values")]
@@ -21,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isGrounded;
 
-    float groundCheckDistance = 0.1f;
+    float groundCheckDistance = 0.6f;
 
     [Header("What Is Ground")]
     public LayerMask groundLayer;
@@ -52,11 +56,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        Debug.Log("Jump Called");
         if (isGrounded)
         {
+            //AudioManager.Instance.PlayJumpSound();
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
-            Debug.Log("Ground check done");
         }
     }
 
