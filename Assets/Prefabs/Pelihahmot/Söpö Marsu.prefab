@@ -26,12 +26,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3016027921757810771, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
       propertyPath: m_Name
-      value: "S\xF6p\xF6 Marsu Variant"
+      value: "S\xF6p\xF6 Marsu"
       objectReference: {fileID: 0}
     - target: {fileID: 6494451152784708955, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
       propertyPath: playerImage
       value: 
       objectReference: {fileID: -6121437719159721883, guid: 206b06bee1f01644e8a14fc0ed1f65f6, type: 3}
+    - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6762881
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.92833877
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0037064552
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.008648738
+      objectReference: {fileID: 0}
     - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 1.073
@@ -42,11 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.89416665
+      value: 0.6311765
       objectReference: {fileID: 0}
     - target: {fileID: 7063355771425785826, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.2841667
+      value: 0.9064706
       objectReference: {fileID: 0}
     - target: {fileID: 8779860712337452575, guid: 43c5086cb438b4d4195cced5646198c8, type: 3}
       propertyPath: m_LocalPosition.x
