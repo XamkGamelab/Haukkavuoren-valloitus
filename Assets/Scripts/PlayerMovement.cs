@@ -40,21 +40,23 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
     }
 
-    void Update()
+    private void Update()
     {
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer).collider != null;
 
         if (isGrounded)
         {
-            spriteRenderer.sprite = playerImage;
+            if(playerImage)
+                spriteRenderer.sprite = playerImage;
         }
         else
         {
-            spriteRenderer.sprite = jumpImage;
+            if(jumpImage)
+                spriteRenderer.sprite = jumpImage;
         }
     }
 
-    public void Jump()
+    private void Jump()
     {
         if (isGrounded)
         {
