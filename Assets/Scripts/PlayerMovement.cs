@@ -42,18 +42,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer).collider != null;
+        //isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer).collider != null;
+
+        isGrounded = Physics2D.OverlapBox(transform.position + Vector3.down * groundCheckDistance,new Vector2(0.8f, 0.2f),0f,groundLayer);
 
         if (isGrounded)
         {
             if(playerImage)
                 spriteRenderer.sprite = playerImage;
         }
-        else
-        {
-            if(jumpImage)
-                spriteRenderer.sprite = jumpImage;
-        }
+        //else
+        //{
+        //    if(jumpImage)
+        //        spriteRenderer.sprite = jumpImage;
+        //}
     }
 
     private void Jump()
@@ -77,5 +79,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputValue inputValue)
     {
         moveInput = inputValue.Get<Vector2>().x;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawWireCube(
+            transform.position + Vector3.down * groundCheckDistance,
+            new Vector3(0.8f, 0.2f, 0f)
+        );
     }
 }

@@ -4,12 +4,15 @@ public class Finish : MonoBehaviour
 {
     public bool doorOpen = false;
 
+    public GameObject lockObject;
+
+    public GameObject particleEffect;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && doorOpen)
         {
-            //Show you win text
-            Debug.Log("You Win");
+            GameManager.instance.WinGame();
         }
         else
         {

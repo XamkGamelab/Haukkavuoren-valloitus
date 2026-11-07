@@ -33,25 +33,25 @@ public class PlayerMovementEditor : Editor
             }
         }
 
-        // Jump sprite preview
-        if (player.jumpImage != null)
-        {
-            GUILayout.Space(10);
+        //// Jump sprite preview
+        //if (player.jumpImage != null)
+        //{
+        //    GUILayout.Space(10);
 
-            GUILayout.Label("Jump Sprite Preview");
+        //    GUILayout.Label("Jump Sprite Preview");
 
-            Texture2D preview = AssetPreview.GetAssetPreview(
-                player.jumpImage
-            );
+        //    Texture2D preview = AssetPreview.GetAssetPreview(
+        //        player.jumpImage
+        //    );
 
-            if (preview != null)
-            {
-                GUILayout.Label(
-                    preview,
-                    GUILayout.Width(100),
-                    GUILayout.Height(100)
-                );
-            }
-        }
+        //    if (preview != null)
+        //    {
+        //        GUILayout.Label(
+        //            preview,
+        //            GUILayout.Width(100),
+        //            GUILayout.Height(100)
+        //        );
+        //    }
+        //}
     }
 }
