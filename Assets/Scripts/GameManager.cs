@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        AudioManager.Instance.PlayGameEndSound();
         UIManager.instance.winScreen.SetActive(true);
         Time.timeScale = 0f;
     }

@@ -6,7 +6,7 @@ public class Spike : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //play sound
+            AudioManager.Instance.PlayHitSound();
             GameManager.instance.RestartLevel();
             Destroy(gameObject);
         }
