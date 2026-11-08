@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Values")]
     [Range(1f, 20f)]
     public float moveSpeed = 10f;
-    [Range(1f, 15f)]
-    public float jumpStrength = 5f;
+    [Range(1f, 20f)]
+    public float jumpStrength = 8f;
 
     [Header("Player Images")]
     [Tooltip("The sprite shown when the player is on the ground.")]
@@ -25,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isGrounded;
 
-    float groundCheckDistance = 0.6f;
+    public float groundCheckDistance = 0.6f;
+    public float groundCheckWidth = 0.8f;
+    public float groundCheckOffsetX = 0f;
 
     [Header("What Is Ground")]
     public LayerMask groundLayer;
@@ -44,7 +46,14 @@ public class PlayerMovement : MonoBehaviour
     {
         //isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer).collider != null;
 
-        isGrounded = Physics2D.OverlapBox(transform.position + Vector3.down * groundCheckDistance,new Vector2(0.8f, 0.2f),0f,groundLayer);
+        //isGrounded = Physics2D.OverlapBox(transform.position + Vector3.down * groundCheckDistance,new Vector2(groundCheckWidth, 0.2f),0f,groundLayer);
+
+        isGrounded = Physics2D.OverlapBox(
+        transform.position + new Vector3(groundCheckOffsetX, -groundCheckDistance, 0f),
+        new Vector2(groundCheckWidth, 0.2f),
+        0f,
+        groundLayer
+        );
 
         if (isGrounded)
         {
@@ -86,8 +95,8 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.green;
 
         Gizmos.DrawWireCube(
-            transform.position + Vector3.down * groundCheckDistance,
-            new Vector3(0.8f, 0.2f, 0f)
+        transform.position + new Vector3(groundCheckOffsetX, -groundCheckDistance, 0f),
+        new Vector3(groundCheckWidth, 0.2f, 0f)
         );
     }
 }
