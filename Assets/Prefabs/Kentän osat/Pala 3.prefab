@@ -68,9 +68,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pala 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4373784210302931977, guid: 4224eb20bf6ac7b4ca344cb14981f2d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6644146293003924874, guid: 4224eb20bf6ac7b4ca344cb14981f2d2, type: 3}
       propertyPath: m_AutoTiling
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644146293003924874, guid: 4224eb20bf6ac7b4ca344cb14981f2d2, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6644146293003924874, guid: 4224eb20bf6ac7b4ca344cb14981f2d2, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
