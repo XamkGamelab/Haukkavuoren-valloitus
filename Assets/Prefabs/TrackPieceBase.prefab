@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 263437623416702654}
   - component: {fileID: 6644146293003924874}
   - component: {fileID: 5979025765647770774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TrackPieceBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
