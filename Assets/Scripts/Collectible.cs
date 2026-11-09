@@ -8,7 +8,7 @@ public class Collectible : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //play sound
+            AudioManager.Instance.CollectSound();
             Instantiate(particle, transform.position, Quaternion.identity);
             GameManager.instance.CoinCollected(this);
             Destroy(gameObject);

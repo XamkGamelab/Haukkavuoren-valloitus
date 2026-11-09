@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip gameMusic;
     public AudioClip jumpSound;
     public AudioClip gameEndSound;
+    public AudioClip collectSound;
+    public AudioClip hitSound;
 
     private AudioSource musicSource;
     private AudioSource soundSource;
@@ -60,6 +62,22 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.Stop();
             soundSource.PlayOneShot(gameEndSound);
+        }
+    }
+
+    public void CollectSound()
+    {
+        if (collectSound != null)
+        {
+            soundSource.PlayOneShot(collectSound);
+        }
+    }
+
+    public void PlayHitSound()
+    {
+        if (collectSound != null)
+        {
+            soundSource.PlayOneShot(hitSound);
         }
     }
 

@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6a7decec8f654d8981db98d9f0c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  gameMusic: {fileID: 0}
-  jumpSound: {fileID: 0}
-  gameEndSound: {fileID: 0}
+  gameMusic: {fileID: 8300000, guid: 052700c8e5d1af64a9fd9ae9f10ad215, type: 3}
+  jumpSound: {fileID: 8300000, guid: 4a15822cdafd5924f98dd1abdb0164df, type: 3}
+  gameEndSound: {fileID: 8300000, guid: 9d650505b4257cf49b01c611c0e0f358, type: 3}
+  collectSound: {fileID: 8300000, guid: c9084a4dd861c0e4f8cd06c4018f311d, type: 3}
+  hitSound: {fileID: 8300000, guid: 74bb4c5f438b21f4d938cff9738dc0c1, type: 3}
