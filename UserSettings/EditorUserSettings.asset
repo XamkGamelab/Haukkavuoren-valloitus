@@ -3,7 +3,7 @@
 --- !u!162 &1
 EditorUserSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 5
+  serializedVersion: 4
   m_ConfigSettings:
     QuickInstaller_com.unity.purchasing_installRecorded:
       value: 2550581500
@@ -32,6 +32,12 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-5:
       value: 5b530c035305595a5a5a0d2342275e44414e497c7c2c70617c2f4832e6b33660
       flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 06570454070c0f0b550f0f7146270f4445164a797929706778781860b5b13568
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 505701515d025a5a0f0c5b7143265a44134e41732a292765792c4d31bab7313c
+      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
@@ -52,4 +58,3 @@ EditorUserSettings:
   m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
   m_CompressAssetsOnImport: 1
-  m_VCAutoRevertUnchangedFiles: 0
