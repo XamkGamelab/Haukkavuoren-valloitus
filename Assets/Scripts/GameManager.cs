@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -38,7 +39,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Keyboard.current.f1Key.wasPressedThisFrame)
+        {
+            RestartGame();
+        }
+
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            QuitGame();
+        }
     }
 
     public void CoinCollected(Collectible _coin)
@@ -61,6 +70,22 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Exiting game...");
+
+
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+        Application.Quit();
+    #endif
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
